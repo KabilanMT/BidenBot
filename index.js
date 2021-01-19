@@ -8,9 +8,23 @@ client.once('ready', ()=> {
 });
 
 client.on('message', message => {
-    let person = message.guild.members.cache.get(auth.Terry);
-    if(person){
-        person.setNickname("BerryBiden");
+    //Enter emoji in chat, copy link and you will find the emoji id in it
+    if(message.member.id == auth.Terry){
+        message.react("<:malarkey:800959627071586314>")
+        message.react("🇲")
+        message.react("🇦")
+        message.react("🇱")
+        message.react("🅰️")
+        message.react("🇷")
+        message.react("🇰")
+        message.react("🇪")
+        message.react("🇾")
+    }
+});
+
+client.on("guildMemberUpdate", function(oldMember, newMember){
+    if(oldMember.user.id == auth.Terry && newMember.nickname != "BerryBiden"){
+        newMember.setNickname("BerryBiden");
     }
 });
 client.login(auth.token);
