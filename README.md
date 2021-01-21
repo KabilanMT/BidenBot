@@ -1,2 +1,2 @@
 # BidenBot
-A discord bot primarily
+A discord bot primarily to annoy 
